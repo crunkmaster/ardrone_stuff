@@ -4,9 +4,13 @@
 #include <std_msgs/Empty.h>
 #include <ardrone_autonomy/Navdata.h>
 
+ofstream datalog ;
+datalog.open("batterylog.txt");
+
 void navdata_callback( const ardrone_autonomy::Navdata &msg ) {
 	int battery = msg.batteryPercent ;
 	cout << "battery percent: " << battery << endl ;
+	dadtalog << "battery percent: " << battery << endl ;
 }
 
 int main( int argc, char *argv[] ) {
@@ -16,6 +20,6 @@ int main( int argc, char *argv[] ) {
 
 	navdata_sub = nh.subscribe("/ardrone/navdata", 1, navdata_callback ) ;
 	ros::spin() ;
-
+	datalog.close();
 	return 0 ;	
 }
