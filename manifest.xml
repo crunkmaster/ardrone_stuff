@@ -1,0 +1,16 @@
+<package>
+  <description brief="ardrone_stuff">
+
+     ardrone_stuff
+
+  </description>
+  <author>viki</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ardrone_stuff</url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+
+</package>
+
+
